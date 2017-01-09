@@ -51,7 +51,7 @@ namespace AzureDiagnostics
             o.ResultType = jo_record.GetString("resultType",null);
             o.ResultSignature = jo_record.GetString("resultSignature", null);
             o.CorrelationId = jo_record.GetString( "correlationId" , null );
-            o.Identity = jo_record["identity"].ToString();
+            o.Identity = jo_record.GetString("identity", null);
 
             return o;
         }
